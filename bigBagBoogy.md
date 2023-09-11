@@ -10,7 +10,12 @@ git push -u origin main
 
 git rm -r --cached node_modules
 
-# issue:
+# LUKSO:
 
-The background svg's dont have the path element
-They have a <circle> element and in some cases a <gradient>
+Network Parameters
+Setting Value
+Network Name Testnet
+Fork Version 0x42010001
+Chain ID / Network ID 4201
+Currency Symbol LYXt
+RPC URL https://rpc.testnet.lukso.network
