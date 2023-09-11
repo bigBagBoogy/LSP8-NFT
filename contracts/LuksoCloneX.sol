@@ -28,6 +28,8 @@ contract LuksoCloneX is LSP8IdentifiableDigitalAsset, ReentrancyGuard {
             hex"4ed94534e6e56a4cf8cea54daa9fc9b59751668459433f8dba993763d5dc6e20",
             bytes("ipfs://QmR6P52FwU8vVQRjqdi1AjHroVQRx35AzgFdTB3A9Jz5dx")
         );
+        // _setData is an internal method that sets data key/value pairs in a ERC725Y store: a generic data storage standard, used to provide LSPs with dynamic on-chain data storage space, that can be read, decoded and interpreted.
+
         _setData(_LSP8_TOKEN_ID_TYPE, hex"02");
         bytes memory zeroBytes = hex"00000000";
         bytes memory baseURI =

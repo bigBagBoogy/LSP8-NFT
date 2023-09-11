@@ -35,12 +35,11 @@ contract LuksoCloneX is LSP8IdentifiableDigitalAsset, ReentrancyGuard {
             hex"4ed94534e6e56a4cf8cea54daa9fc9b59751668459433f8dba993763d5dc6e20",
             bytes("ipfs://QmR6P52FwU8vVQRjqdi1AjHroVQRx35AzgFdTB3A9Jz5dx")
         );
-
         _setData(_LSP4_METADATA_KEY, jsonUrl);
 
-        _setData(_LSP8_TOKEN_ID_TYPE, hex"02");
+        _setData(_LSP8_TOKEN_ID_TYPE, hex"02"); // 02 indicates string
 
-        bytes memory zeroBytes = hex"00000000";
+        bytes memory zeroBytes = hex"00000000"; // avoiding magic number
         bytes memory baseURI =
             abi.encodePacked(zeroBytes, bytes("ipfs://QmZh7P3YZNxFZUiHkXLNgAtdk2T6PAza3S15Jjg1DzxVGf"));
         _setData(_LSP8_TOKEN_METADATA_BASE_URI, baseURI);

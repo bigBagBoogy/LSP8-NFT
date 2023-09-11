@@ -5,7 +5,7 @@ async function main() {
     gasPrice: "0xB2D05E00", // 3 Gwei
   };
 
-  const owner = "YOUR OWNER ADDRESS";
+  const owner = "0xEC5DBFed2e8A5E88De2AC7a9E5884B0bD4F6Ca7f"; // bigBagBoogy
 
   console.log("deploying LuksoCloneX...");
   const LuksoCloneX = await ethers.getContractFactory("LuksoCloneX");
