@@ -10,6 +10,10 @@ git push -u origin main
 
 git rm -r --cached node_modules
 
+# to do:
+
+finish metadata.json the "hash" of icon and banner
+
 # LUKSO:
 
 Network Parameters

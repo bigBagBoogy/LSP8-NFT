@@ -9,21 +9,21 @@
       ],
       "icon": [
         {
-          "width": 250,
-          "height": 250,
+          "width": 350,
+          "height": 350,
           "hashFunction": "keccak256(bytes)",
           "hash": "0x20ac942770c18ffcb0fe58e21d53ae36debd3d4f32bbf334fe07bc6f6041c0db",
-          "url": "ipfs://QmbwaMGKM3dTTWzx37yZYh5xn7n8NLHfAkBjTZqjqtXGro"
+          "url": "ipfs://QmZpgKC5sMFQP3pdQxCFpmm1Rd1aJ9fwmAnruPUuNwTGXs"
         },
       ],
       "images": [
         [
           {
-            "width": 1800,
-            "height": 363,
+            "width": 1400,
+            "height": 400,
             "hashFunction": "keccak256(bytes)",
             "hash": "0x0b25fe93afa1acddffbca692cd7143892542e92ba33f8a4265571fa4d1ab6c61",
-            "url": "ipfs://QmaRAJsWMafXvvJgEXVSh9jyVkSypxHeFnCsAm7Nzg76Bi"
+            "url": "ipfs://QmS15XvQZfGvUTJSPRankVtr7SiAm4G5Q1we5B6x8c8Bhc"
           }
         ]
       ],
