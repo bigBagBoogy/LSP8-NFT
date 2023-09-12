@@ -16,7 +16,6 @@ bytes32 constant _LSP8_TOKEN_ID_TYPE = 0x715f248956de7ce65e94d9d836bfead479f7e70
 bytes32 constant _LSP8_TOKEN_METADATA_BASE_URI = 0x1a7628600c3bac7101f53697f48df381ddc36b9015e7d7c9c5633d1252aa2843;
 uint256 constant PUBLIC_PRICE_PER_TOKEN = 0.2 ether;
 uint256 constant MAX_SUPPLY = 100;
-uint256 constant MINT_END_BLOCK = 2_000_000;
 
 mapping(address => uint256) private _mintedTokensPerAddress;
 
@@ -77,7 +76,6 @@ contract LuksoCloneX is LSP8IdentifiableDigitalAsset, ReentrancyGuard {
 
     function publicMint(address to, uint256 amount, bool allowNonLSP1Recipient) external payable nonReentrant {
         require(msg.value == PUBLIC_PRICE_PER_TOKEN * amount, "Invalid LYX amount sent");
-        require(block.number <= MINT_END_BLOCK, "Mint ended");
 
         uint256 tokenSupply = totalSupply(); // gas saving
         require(tokenSupply + amount <= MAX_SUPPLY, "Exceeds MAX_SUPPLY");

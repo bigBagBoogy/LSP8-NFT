@@ -1,0 +1,32 @@
+{
+    "LSP4Metadata": {
+      "description": "bigBagBoogy - LUKSO | 100 buttons",
+      "links": [
+        {
+          "title": "Github",
+          "url": "<https://github.com/bigBagBoogy>"
+        }        
+      ],
+      "icon": [
+        {
+          "width": 250,
+          "height": 250,
+          "hashFunction": "keccak256(bytes)",
+          "hash": "0x20ac942770c18ffcb0fe58e21d53ae36debd3d4f32bbf334fe07bc6f6041c0db",
+          "url": "ipfs://QmbwaMGKM3dTTWzx37yZYh5xn7n8NLHfAkBjTZqjqtXGro"
+        },
+      ],
+      "images": [
+        [
+          {
+            "width": 1800,
+            "height": 363,
+            "hashFunction": "keccak256(bytes)",
+            "hash": "0x0b25fe93afa1acddffbca692cd7143892542e92ba33f8a4265571fa4d1ab6c61",
+            "url": "ipfs://QmaRAJsWMafXvvJgEXVSh9jyVkSypxHeFnCsAm7Nzg76Bi"
+          }
+        ]
+      ],
+      "assets": []
+    }
+  }
