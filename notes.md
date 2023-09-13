@@ -65,3 +65,25 @@ Yes, that's correct. In the LSP4 standard, the key 0x114bd03b3a46d48759680d81ebb
 When you set this key using the \_setData function, you don't need to specify the valueType or keyType explicitly because these properties are defined by the standard. You simply use the \_setData function to set the data associated with this key, which in this case is the Ethereum address of the creator.
 
 So, in your code, you use the \_setData function to set the creators array's length and append your Ethereum address. The type being an address is indeed implied by the valueType specified in the protocol's standard. This allows for consistency and interoperability among contracts that follow the LSP4 standard.
+
+# still to submit:
+
+so next the author writes: `_setData(_LSP8_TOKEN_ID_TYPE, hex"02");` which means "string" I'm confused why, because I understood he uses incremental numbers to pick a metadata file for a token. I found this in the docs about it: ```To add a baseURI on an LSP8 collection, we’re gonna use the LSP8TokenMetadataBaseURI key (detailed here). Let’s add the following lines in our code:
+
+// Before the contract declaration
+bytes32 constant \_LSP8_TOKEN_ID_TYPE = 0x715f248956de7ce65e94d9d836bfead479f7e70d69b718d47bfe7b00e05b4fe4;
+bytes32 constant \_LSP8_TOKEN_METADATA_BASE_URI = 0x1a7628600c3bac7101f53697f48df381ddc36b9015e7d7c9c5633d1252aa2843;
+...
+// In the constructor
+\_setData(\_LSP8_TOKEN_ID_TYPE, hex"02");
+
+bytes memory zeroBytes = hex"00000000";
+bytes memory baseURI = abi.encodePacked(zeroBytes, bytes('ipfs://QmZh7P3YZNxFZUiHkXLNgAtdk2T6PAza3S15Jjg1DzxVGf'));
+\_setData(\_LSP8_TOKEN_METADATA_BASE_URI, baseURI);
+So what did we do here ?
+
+First, we declared the constants for the 2 bytes32 keys we’ll be using.
+
+Then, we set the value of the first key, token id type, to 2, as this number represents a tokenId of type uint256. If you’re wondering why we’d need to specify the type of the tokenId, it’s because tokenIds’ are always stored as bytes32(hexadecimal values), so we need to know how to interpret them (e.g. 12 in hexadecimal is c). You can find all the different tokenId types there: LSP8 - TokenIdType
+
+We’ve now added the baseURI to the store. You might have missed it, but we also added hex”00000000” in front of our URI: that’s a slot that can be used when we want to add verifiability to our metadata by using the tokenId as a hash (hashFunction(<metadataContent>)). This bytes4 slot tells us which hash function has been used to hash the token metadata content (e.g. keccak256 = 0x6f357c6a). In our case, we’re using an unhashed token id so we won’t hash the content. Since we don’t need to have a hash function, we’ll just fill this slot with zeros.```

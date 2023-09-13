@@ -23,19 +23,19 @@ mapping(address => uint256) private _mintedTokensPerAddress;
 contract LuksoCloneX is LSP8IdentifiableDigitalAsset, ReentrancyGuard {
     //below LSP8IdentifiableDigitalAsset parent contract takes care of setting the name, symbol and owner. Here you would find the lines: super._setData(_LSP4_TOKEN_NAME_KEY, bytes(name_));  and:    super._setData(_LSP4_TOKEN_SYMBOL_KEY, bytes(symbol_));
     constructor(address owner_) LSP8IdentifiableDigitalAsset("LuksoButtons", "BTNS", owner_) {
-        // 4ed94534e6e56a4cf8cea54daa9fc9b59751668459433f8dba993763d5dc6e20 is the hash of the URI JSON content
+        // c4f5c04d7a38e625bccf43ce710c72ce63a162fb507200d4ae684032b5109e4b is the hash of the URI JSON content obtained with the hasherOfString.ts running: ```npm run hasherOfString```
         bytes memory jsonUrl = abi.encodePacked(
-            bytes4(keccak256("keccak256(utf8)")),
-            hex"4ed94534e6e56a4cf8cea54daa9fc9b59751668459433f8dba993763d5dc6e20",
-            bytes("ipfs://QmR6P52FwU8vVQRjqdi1AjHroVQRx35AzgFdTB3A9Jz5dx") // link to metadata
+            bytes4(keccak256("keccak256(utf8)")),The expression bytes4(keccak256("keccak256(utf8)")) // The expression bytes4(keccak256("keccak256(utf8)")) is used to compute the keccak256 hash of the string "keccak256(utf8)" and then convert the first 4 bytes of that hash into a bytes4 data type. This is often used in Ethereum smart contracts to generate function selectors for function calls.
+            hex"c4f5c04d7a38e625bccf43ce710c72ce63a162fb507200d4ae684032b5109e4b",
+            bytes("ipfs://QmQKhYpFUX3xKLkMHc1zfwBHxBafLXtvQnbHq4ATNk71cJ") // link to metadata of the contract
         );
         // _setData is an internal method that sets data key/value pairs in a ERC725Y store: a generic data storage standard, used to provide LSPs with dynamic on-chain data storage space, that can be read, decoded and interpreted.
 
         _setData(_LSP8_TOKEN_ID_TYPE, hex"02"); // 02 indicates string
 
-        bytes memory zeroBytes = hex"00000000"; // avoiding magic number
+        bytes memory zeroBytes = hex"00000000"; // here we are going to append the hex representation of 0 to the beginning of the bytes object of the ipfs URI
         bytes memory baseURI =
-            abi.encodePacked(zeroBytes, bytes("ipfs://QmZh7P3YZNxFZUiHkXLNgAtdk2T6PAza3S15Jjg1DzxVGf"));
+            abi.encodePacked(zeroBytes, bytes("ipfs://QmfBbkqTqzVtA7Mkya9bRmKkWLbYZQ1kyHRJBL1eiw8vgj"));
 
         _setData(
             0x4690256ef7e93288012f00000000000000000000000000000000000000000001,
