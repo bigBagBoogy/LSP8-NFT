@@ -1,0 +1,31 @@
+{
+    "LSP4Metadata": {
+      "name": "Buttons",
+      "description": "Button collection",
+      "images": [
+        [
+          {
+            "width": 1000,
+            "height": 1000,
+            "hashFunction": "keccak256",
+            "hash": "0x56307ffd8bc9c52ccde9445d0a6935fafbd1ae1ea325920a196890b6b1612a0a",
+            "url": "ipfs://QmRTfvM8qfHrKttHwxHBmUzeqJ7cpRDM2qtZNV6XChTdEZ"
+          }
+        ]
+      ],
+      "assets": [],
+      "attributes": [
+        {
+          "key": "buttonColor",
+          "value": "Red",
+          "type": "string"
+        },
+        {
+          "key": "Subject",
+          "value": "BEAR",
+          "type": "string"
+        }
+      ]
+    }
+  }
+  
