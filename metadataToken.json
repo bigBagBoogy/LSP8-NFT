@@ -1,0 +1,19 @@
+{
+    "name": "Buttons",
+    "description": "A brief description of your NFT.",
+    "image": "https://your-ipfs-url.com/image.jpg",
+    "external_url": "https://your-website.com",
+    "attributes": [
+      {
+        "trait_type": "Trait 1",
+        "value": "Value 1"
+      },
+      {
+        "trait_type": "Trait 2",
+        "value": "Value 2"
+      }
+      // Add more attributes as needed
+    ]
+  }
+  {"LSP4Metadata":{"name":"Buttons","description":"Button collection","links":[],"icon":[],"images":[[{"width":1000,"height":1000,"hashFunction":"keccak256","hash":"0xc36b2c3f1abf7fddd25773d03967e724dd4b45a8d169cd9cf8349e92dd3a9ebd","url":"https://clonex-assets.rtfkt.com/images/1.png"}]],"assets":[],"attributes":[{"key":"buttonColor","value":"Pink","type":"string"},{"key":"Subject","value":"BEAR","type":"string"}]}}
+  
