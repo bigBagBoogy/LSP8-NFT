@@ -14,8 +14,10 @@ import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.
 
 //this _LSP8_TOKEN_ID_TYPE is the same for all NFT contracts using token id type uint2526.
 bytes32 constant _LSP8_TOKEN_ID_TYPE = 0x715f248956de7ce65e94d9d836bfead479f7e70d69b718d47bfe7b00e05b4fe4;
+// above is found at:   https://github.com/lukso-network/LIPs/blob/main/LSPs/LSP-8-IdentifiableDigitalAsset.md#lsp8tokenidtype
 //this _LSP8_TOKEN_METADATA_BASE_URI is the same for all NFT contracts. 
 bytes32 constant _LSP8_TOKEN_METADATA_BASE_URI = 0x1a7628600c3bac7101f53697f48df381ddc36b9015e7d7c9c5633d1252aa2843;
+
 uint256 constant PUBLIC_PRICE_PER_TOKEN = 0.2 ether;
 uint256 constant MAX_SUPPLY = 100;
 
@@ -46,10 +48,11 @@ contract LuksoCloneX is LSP8IdentifiableDigitalAsset, ReentrancyGuard {
         // We set the first element of the array to the creator address
         _setData(
             0x114bd03b3a46d48759680d81ebb2b41400000000000000000000000000000000,
-            hex"5870dC9aEB06E26A0C8130eF2C6C12d80b1E0375"
+            hex"0xEC5DBFed2e8A5E88De2AC7a9E5884B0bD4F6Ca7f"
         );
 
-        // Set the creator map with interfaceId=0x66767497 and creator index 0
+        // Set the creator map with interfaceId=0x66767497 <-- but not this,
+        // because this is from universal profile.  And creator index 0
         bytes32 creatorsMapKey =
             bytes32(abi.encodePacked(_LSP4_CREATORS_MAP_KEY_PREFIX, 0x5870dC9aEB06E26A0C8130eF2C6C12d80b1E0375));
         _setData(creatorsMapKey, hex"667674970000000000000000");

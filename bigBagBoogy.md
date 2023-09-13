@@ -12,6 +12,8 @@ git rm -r --cached node_modules
 
 # to do:
 
+line 56 customize! tutorial says: "The last element is a mapping to indicate the interfaceId (ERC165) and the index (in the array) of a creator (0x66767497stands for LSP0 Universal Profile v0.8):
+
 finish metadata.json the "hash" of icon and banner
 
 for me to replicate this with 5 nft's, I need 5 images. Upload those to ipfs an get their ipfs urls. Embed those ipfs urls in token metadata to form 5 .json files. Name these files "1, 2, 3, 4 and 5", put these files in a folder (I guess this folder can have any name). Then upload this folder to IPFS also and then the url of this folder on ipfs will be my baseUrl
