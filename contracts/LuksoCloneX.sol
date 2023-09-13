@@ -58,16 +58,6 @@ contract LuksoCloneX is LSP8IdentifiableDigitalAsset, ReentrancyGuard {
         _setData(creatorsMapKey, hex"667674970000000000000000");
     }
 
-    mapping(address => uint256) private whitelistAllowance;
-
-    function setWhitelistAllowances(address[] calldata accounts, uint256[] calldata allowances) external onlyOwner {
-        uint256 length = accounts.length; // Gas Saving
-        require(length == allowances.length, "Accounts and allowances arrays must have the same length");
-
-        for (uint256 i = 0; i < length; i++) {
-            whitelistAllowance[accounts[i]] = allowances[i];
-        }
-    }
 
     function publicMint(address to, uint256 amount, bool allowNonLSP1Recipient) external payable nonReentrant {
         require(msg.value == PUBLIC_PRICE_PER_TOKEN * amount, "Invalid LYX amount sent");
