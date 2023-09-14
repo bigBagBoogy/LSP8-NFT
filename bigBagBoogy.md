@@ -12,7 +12,19 @@ git rm -r --cached node_modules
 
 # to do:
 
-line 56 customize! tutorial says: "The last element is a mapping to indicate the interfaceId (ERC165) and the index (in the array) of a creator (0x66767497stands for LSP0 Universal Profile v0.8):
+LuksoCloneX deployed to: 0xB840a9820e4dae24822De98B1d47e4Cc98946E4d
+https://explorer.execution.testnet.lukso.network/address/0xB840a9820e4dae24822De98B1d47e4Cc98946E4d/transactions#address-tabs
+
+write tests!
+
+npx hardhat verify 0xB840a9820e4dae24822De98B1d47e4Cc98946E4d 0xEC5DBFed2e8A5E88De2AC7a9E5884B0bD4F6Ca7f --network testnet
+Nothing to compile
+Successfully submitted source code for contract
+contracts/LuksoCloneX.sol:LuksoCloneX at 0xB840a9820e4dae24822De98B1d47e4Cc98946E4d
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract LuksoCloneX on Etherscan.
+https://explorer.execution.testnet.lukso.network/address/0xB840a9820e4dae24822De98B1d47e4Cc98946E4d#code
 
 finish metadata.json the "hash" of icon and banner
 
